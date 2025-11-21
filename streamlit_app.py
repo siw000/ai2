@@ -1,4 +1,4 @@
-# streamlit_py
+# streamlit_app.py
 import os, re
 from io import BytesIO
 import numpy as np
@@ -45,7 +45,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1uj2lD8goJDLo9uSg_8HcT4bxnl2trPc8")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1cdbz-r9kShjyDwG8fujdaDUpwc_RObq7")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -73,8 +73,8 @@ CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
     #   "texts": ["짬뽕의 특징과 유래", "국물 맛 포인트", "지역별 스타일 차이"],
     #   "images": ["https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
     #   "videos": ["https://youtu.be/XXXXXXXXXXX"]
-    # },
-}
+    # }, }
+labels[0]:{"texts":["중국식 냉면은 맛있어"],
 
 # ======================
 # 유틸
